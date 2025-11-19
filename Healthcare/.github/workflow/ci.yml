@@ -21,5 +21,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build & Test
-        run: mvn clean verify
+      - name: Verify JDK Version
+        run: java -version
+
+      - name: Maven Clean Install (with Checkstyle)
+        run: mvn -B clean install
