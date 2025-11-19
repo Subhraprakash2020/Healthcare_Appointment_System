@@ -24,6 +24,7 @@ public class PatientController {
     @Autowired
     private SequenceGeneratorService sequenceGeneratorService;
 
+    //Patient Controller
     @PostMapping("/patient")
     public Patient createPatient(@RequestBody Patient patient) {
         patient.setId(sequenceGeneratorService.generateSequence(Patient.SEQUENCE_NAME));
