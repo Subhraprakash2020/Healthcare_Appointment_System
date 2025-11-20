@@ -21,8 +21,6 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Verify JDK Version
-        run: java -version
-
-      - name: Maven Clean Install (with Checkstyle)
+      - name: Build & Test
+        working-directory: ./Healthcare
         run: mvn -B clean install
