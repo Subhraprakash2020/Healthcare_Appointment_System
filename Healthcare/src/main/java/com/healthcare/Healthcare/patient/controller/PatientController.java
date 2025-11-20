@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/healthcare")
 public class PatientController {
-@Autowired private PatientRepository patientRepository;
-@Autowired private SequenceGeneratorService sequenceGeneratorService;
+  @Autowired private PatientRepository patientRepository;
+  @Autowired private SequenceGeneratorService sequenceGeneratorService;
 
   // Patient Controller
   @PostMapping("/patient")

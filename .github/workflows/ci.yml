@@ -24,3 +24,12 @@ jobs:
       - name: Build & Test
         working-directory: ./Healthcare
         run: mvn -B clean install
+      
+      - name: Run Checkstyle
+        working-directory: ./Healthcare
+        run: mvn checkstyle:check
+
+      - name: Run Spotless check
+        working-directory: ./Healthcare
+        run: mvn spotless:check
+
